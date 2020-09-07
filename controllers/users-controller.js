@@ -1,5 +1,5 @@
 // Require Users Model
-const {Users} = require('../models');
+const { Users } = require('../models');
 
 // Set up Users Controller
 const usersController = {
@@ -15,9 +15,15 @@ const usersController = {
     getAllUsers(req, res) {
         Users.find({})
         // populate users thoughts
-            .populate({path: 'thoughts', select: '-__v'})
+            .populate({
+                path: 'thoughts',
+                select: '-__v'
+            })
             // populate user friends
-            .populate({path: 'friends', select: '-__v'})
+            .populate({
+                path: 'friends',
+                select: '-__v'
+            })
             .select('-__v')
             // .sort({_id: -1})
             .then(dbUsersData => res.json(dbUsersData))
@@ -30,8 +36,14 @@ const usersController = {
     // Get single user by ID
     getUsersById({params}, res) {
         Users.findOne({_id: params.id })
-            .populate({path: 'thoughts', select: '-__v'})
-            .populate({path: 'friends', select: '-__v'})
+            .populate({
+                path: 'thoughts',
+                select: '-__v'
+            })
+            .populate({
+                path: 'friends',
+                select: '-__v'
+            })
             .select('-__v')
             // return if no user is found
             .then(dbUsersData => {
@@ -75,7 +87,10 @@ const usersController = {
     // Delete a current user by ID
     addFriend({params}, res) {
         Users.findOneAndUpdate({_id: params.id}, {$push: { friends: params.friendId}}, {new: true})
-            .populate({path: 'friends', select: ('-__v')})
+            .populate({
+                path: 'friends',
+                select: '-__v'
+            })
             .select('-__v')
             .then(dbUsersData => {
                 if (!dbUsersData) {
@@ -90,7 +105,10 @@ const usersController = {
     // Delete a current Friend
     deleteFriend({ params }, res) {
         Users.findOneAndUpdate({_id: params.id}, {$pull: { friends: params.friendId}}, {new: true})
-            .populate({path: 'friends', select: '-__v'})
+            .populate({
+                path: 'friends',
+                select: '-__v'
+            })
             .select('-__v')
             .then(dbUsersData => {
                 if(!dbUsersData) {
