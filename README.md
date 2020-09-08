@@ -4,6 +4,22 @@
 
 *An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. Technologies - Express.js for routing, a MongoDB database, Mongoose ODM, and Moment.js package to format time*
 
+### Application Demo
+
+![]()
+
+This walkthrough video shows GET routes to return a single user and a single thought being tested using Postman
+
+
+![](public/assets/images/user-routes.gif)
+
+This walkthrough video shows the POST, PUT, and DELETE routes for users being tested using Postman
+
+
+![]()
+
+This walkthrough video shows the POST, PUT, and DELETE routes for thoughts being tested using Postman
+
 ### User Story
 
 ```text
