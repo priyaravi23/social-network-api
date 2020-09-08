@@ -6,7 +6,7 @@
 
 ### Application Demo
 
-![]()
+![](public/assets/images/users-thoughts-routes.gif)
 
 This walkthrough video shows GET routes to return a single user and a single thought being tested using Postman
 
