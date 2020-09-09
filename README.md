@@ -8,17 +8,25 @@
 
 ![](public/assets/images/users-thoughts-routes.gif)
 
-This walkthrough video shows GET routes to return a single user and a single thought being tested using Postman
+This walkthrough video shows 
+- GET routes to return all users and all thoughts
+- GET routes to return a single user and a single thought
 
 
 ![](public/assets/images/users-routes.gif)
 
-This walkthrough video shows the POST, PUT, and DELETE routes for users being tested using Postman
+This walkthrough video shows the POST, PUT, and DELETE routes for users
 
 
 ![](public/assets/images/thoughts-routes.gif)
 
-This walkthrough video shows the POST, PUT, and DELETE routes for thoughts being tested using Postman
+This walkthrough video shows the POST, PUT, and DELETE routes for thoughts
+
+
+![](public/assets/images/reactions-routes.gif)
+
+This walkthrough video shows the POST, and DELETE routes for reactions
+
 
 ### User Story
 

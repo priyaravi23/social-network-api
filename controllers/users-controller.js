@@ -84,7 +84,6 @@ const usersController = {
             .catch(err => res.status(400).json(err));
     },
 
-    // Delete a current user by ID
     addFriend({params}, res) {
         Users.findOneAndUpdate({_id: params.id}, {$push: { friends: params.friendId}}, {new: true})
             .populate({
